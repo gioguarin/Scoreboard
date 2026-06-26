@@ -62,9 +62,10 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
 publishes `dist/` to GitHub Pages (`upload-pages-artifact` + `deploy-pages`,
 with `pages: write` / `id-token: write`).
 
-The Vite `base` is set to `/scoreboard/` in `vite.config.ts` so asset paths
-resolve at the Pages URL **https://gioguarin.github.io/scoreboard/**. If the
-repository is renamed, update `base` to match the new repo name.
+The Vite `base` is set to `/Scoreboard/` in `vite.config.ts` so asset paths
+resolve at the Pages URL **https://gioguarin.github.io/Scoreboard/**. GitHub
+Pages paths are case-sensitive, so `base` must match the repo name's exact
+casing. If the repository is renamed, update `base` to match.
 
 > One-time setup: in the repository's **Settings → Pages**, set the source to
 > **GitHub Actions**.

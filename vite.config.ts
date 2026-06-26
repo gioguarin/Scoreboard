@@ -3,9 +3,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // `base` must match the GitHub Pages repo path so built asset URLs resolve at
-// https://<user>.github.io/<repo>/. This repo deploys under /scoreboard/.
+// https://<user>.github.io/<repo>/. GitHub Pages paths are case-sensitive, so
+// this must match the repo name's exact casing: /Scoreboard/.
 export default defineConfig({
-  base: '/scoreboard/',
+  base: '/Scoreboard/',
   plugins: [react()],
   test: {
     globals: true,
